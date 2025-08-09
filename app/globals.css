@@ -1,0 +1,118 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 255 255 255;
+    --foreground: 17 24 39;
+    --card: 255 255 255;
+    --card-foreground: 17 24 39;
+    --popover: 255 255 255;
+    --popover-foreground: 17 24 39;
+    --primary: 17 24 39;
+    --primary-foreground: 255 255 255;
+    --secondary: 249 250 251;
+    --secondary-foreground: 17 24 39;
+    --muted: 249 250 251;
+    --muted-foreground: 107 114 128;
+    --accent: 59 130 246;
+    --accent-foreground: 255 255 255;
+    --destructive: 239 68 68;
+    --destructive-foreground: 248 250 252;
+    --border: 229 231 235;
+    --input: 229 231 235;
+    --ring: 17 24 39;
+    --radius: 0.5rem;
+  }
+
+  * {
+    @apply border-border;
+  }
+  
+  body {
+    @apply bg-white text-charcoal-900;
+    font-family: system-ui, sans-serif;
+    line-height: 1.6;
+  }
+}
+
+@layer components {
+  .premium-text-gradient {
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(90deg, #374151, #3b82f6, #22c55e, #f97316);
+  }
+
+  .btn-accent {
+    @apply bg-gradient-to-r from-blue-500 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-semibold rounded-xl px-8 py-4 transition-all duration-300;
+  }
+
+  .elegant-card {
+    @apply bg-white border border-gray-300 rounded-2xl shadow-lg;
+  }
+
+  .adorable-card {
+    @apply bg-white border border-gray-300 rounded-2xl shadow-lg;
+  }
+
+  .golden-card {
+    @apply bg-white border border-gray-300 rounded-2xl shadow-lg;
+  }
+
+  .golden-text-gradient {
+    @apply bg-clip-text text-transparent;
+    background: linear-gradient(135deg, #d4af37 0%, #f7e7b1 50%, #d4af37 100%);
+  }
+
+  .bg-golden-gradient {
+    background: linear-gradient(135deg, #ffffff 0%, #f9fafb 40%, #f7e7b1 80%, #d4af37 100%);
+  }
+
+  .ornament-divider {
+    position: relative;
+    text-align: center;
+    margin: 2rem 0;
+  }
+
+  .ornament-divider::before {
+    content: "❋ ❋ ❋";
+    color: #374151;
+    font-size: 1.2rem;
+    background: white;
+    padding: 0 1rem;
+  }
+
+  .ornament-divider::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(to right, transparent, #e5e7eb, transparent);
+    z-index: -1;
+  }
+
+  .container-responsive {
+    @apply container mx-auto px-4 sm:px-6 lg:px-8;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.8s ease-out;
+}
+
+html {
+  scroll-behavior: smooth;
+} 
