@@ -45,8 +45,12 @@ export function GoldenHeader() {
         <div className="flex items-center justify-between h-16 lg:h-20">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-3 group">
-            <div className="w-10 h-10 lg:w-12 lg:h-12 rounded-full flex items-center justify-center bg-white border-2 border-dreamy-300 shadow-[0_4px_10px_rgba(212,175,55,0.3)] transition-transform duration-300 group-hover:scale-105">
-              <span className="font-bold text-lg lg:text-xl text-dreamy-700">JL</span>
+            <div className="w-10 h-10 lg:w-12 lg:h-12 flex items-center justify-center transition-transform duration-300 group-hover:scale-105">
+              <img 
+                src="/jai-laxmi-logo-golden.png" 
+                alt="Jai Laxmi Sarees Logo" 
+                className="w-full h-full object-contain"
+              />
             </div>
             <div className="hidden sm:block">
               <h1 className="text-xl lg:text-2xl font-display font-bold premium-text-gradient">

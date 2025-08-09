@@ -26,8 +26,12 @@ export function GoldenFooter() {
       <div className="container-responsive py-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
         <div>
           <Link href="/" className="inline-flex items-center gap-3 mb-4">
-            <div className="w-12 h-12 rounded-full flex items-center justify-center bg-white border-2 border-ocean-300">
-              <span className="font-bold text-xl text-ocean-700">JL</span>
+            <div className="w-12 h-12 flex items-center justify-center">
+              <img 
+                src="/jai-laxmi-logo-golden.png" 
+                alt="Jai Laxmi Sarees Logo" 
+                className="w-full h-full object-contain"
+              />
             </div>
             <span className="text-xl font-display">Jai Laxmi Sarees</span>
           </Link>

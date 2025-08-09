@@ -64,8 +64,12 @@ export function PremiumFooter() {
           <div className="lg:col-span-1">
             <Link href="/" className="inline-flex items-center space-x-3 mb-6 group">
               <div className="relative">
-                <div className="w-12 h-12 bg-gradient-to-br from-saffron-500 to-saffron-600 rounded-full flex items-center justify-center shadow-indian mandala-bg">
-                  <span className="text-white font-bold text-xl">JL</span>
+                <div className="w-12 h-12 flex items-center justify-center">
+                  <img 
+                    src="/jai-laxmi-logo-golden.png" 
+                    alt="Jai Laxmi Sarees Logo" 
+                    className="w-full h-full object-contain"
+                  />
                 </div>
                 <div className="absolute inset-0 w-12 h-12 border-2 border-saffron-300 rounded-full animate-spin-slow opacity-30"></div>
               </div>

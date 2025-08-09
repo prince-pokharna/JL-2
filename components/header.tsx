@@ -29,8 +29,12 @@ export function Header() {
         <div className="flex items-center justify-between py-4">
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-2">
-            <div className="w-12 h-12 bg-gradient-gold rounded-full flex items-center justify-center">
-              <span className="text-white font-bold text-xl">JL</span>
+            <div className="w-12 h-12 flex items-center justify-center">
+              <img 
+                src="/jai-laxmi-logo-white.png" 
+                alt="Jai Laxmi Sarees Logo" 
+                className="w-full h-full object-contain"
+              />
             </div>
             <div>
               <h1 className="text-2xl font-display font-bold text-white">Jai Laxmi</h1>
