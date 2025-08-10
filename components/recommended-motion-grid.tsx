@@ -12,13 +12,16 @@ export function RecommendedMotionGrid() {
   const items = featuredProducts.slice(0, 6)
 
   return (
-    <section className="py-12">
+    <section className="py-16">
       <div className="container-responsive">
-        <div className="grid md:grid-cols-3 gap-6">
+        <h2 className="text-3xl font-bold font-display text-theme-primary mb-8 text-center">
+          Recommended For You
+        </h2>
+        <div className="grid md:grid-cols-3 gap-8">
           {items.map((p, i) => (
             <Link href="/products" key={p.id} className="block group">
               <div
-                className="relative overflow-hidden rounded-3xl bg-white border border-elegant-200"
+                className="relative overflow-hidden rounded-lg bg-theme-light"
                 style={{
                   height: i % 3 === 0 ? 420 : 300,
                   transform: mounted ? "translateY(0px)" : "translateY(20px)",
@@ -26,11 +29,16 @@ export function RecommendedMotionGrid() {
                   transition: `all .7s ease ${i * 80}ms`,
                 }}
               >
-                <Image src={p.image} alt={p.name} fill className="object-cover transition-transform duration-700 group-hover:scale-110" />
-                <div className="absolute bottom-3 left-3 right-3 rounded-2xl bg-white/85 backdrop-blur p-3">
-                  <p className="text-xs text-charcoal-600">{p.category}</p>
-                  <h4 className="font-semibold text-elegant-900 line-clamp-1">{p.name}</h4>
-                  <div className="text-sm text-charcoal-800">From ₹{p.price.toLocaleString()}</div>
+                <Image
+                  src={p.image}
+                  alt={p.name}
+                  fill
+                  className="object-cover transition-transform duration-700 group-hover:scale-110"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+                <div className="absolute bottom-0 left-0 right-0 p-4 text-white">
+                  <h4 className="font-bold text-lg">{p.name}</h4>
+                  <p className="text-sm">From ₹{p.price.toLocaleString()}</p>
                 </div>
               </div>
             </Link>
